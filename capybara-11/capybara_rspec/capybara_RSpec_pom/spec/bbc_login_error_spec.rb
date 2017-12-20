@@ -24,7 +24,7 @@ describe 'Incorrect user details produces valid error' do
     # #   expect(@bbc_site.current_url).to eq('https://www.bbc.co.uk/')
     # end
 
-    it 'it should respond with the correct text when you makw an account' do
+    it 'it should respond with the correct text when you make an account' do
       @bbc_site = BbcSite.new
       @bbc_site.bbc_homepage.visit_home_page
       @bbc_site.bbc_homepage.click_sign_in_link
@@ -33,7 +33,7 @@ describe 'Incorrect user details produces valid error' do
       @bbc_site.bbc_sign_in_page.fill_in_dob_month('01')
       @bbc_site.bbc_sign_in_page.fill_in_dob_year('1994')
       @bbc_site.bbc_sign_in_page.click_sign_in_button
-      @bbc_site.bbc_sign_in_page.fill_in_username("football@hotmail.com")
+      @bbc_site.bbc_sign_in_page.fill_in_username("heythere@hotmail.co.uk")
       @bbc_site.bbc_sign_in_page.fill_in_password("nukester786")
       @bbc_site.bbc_sign_in_page.fill_in_postcode("NW9 8DU")
       @bbc_site.bbc_sign_in_page.select_gender("Male")
